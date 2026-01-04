@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myextrapod1
+  name: myextrapod1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myextrapod1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: myextrapod1
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        resources: {}
+status: {}
